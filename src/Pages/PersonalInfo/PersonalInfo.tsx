@@ -11,7 +11,7 @@ import SectionSpacer from "./Styled/SectionSpacer";
 import Spacer from "./Styled/Spacer";
 const PersonalInfo = () => {
   return (
-    <div>
+    <>
       <Container>
         <Form>
           <StatusBar />
@@ -41,7 +41,7 @@ const PersonalInfo = () => {
           </FormInfo>
         </Form>
       </Container>
-    </div>
+    </>
   );
 };
 

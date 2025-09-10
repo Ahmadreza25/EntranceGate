@@ -1,55 +1,73 @@
 import StatusBar from "../../components/StatusBar/StatusBar";
+import Plans from "./Styled/Plans";
 import Slidebutton from "../../assets/icons/Slidebutton.png";
+import Container from "./Styled/Container";
+import PlanBox from "./Styled/PlanBox";
+import Explanation from "./Styled/Explanation";
+import Price from "./Styled/Price";
+import Title from "./Styled/Title";
+import Circle from "./Styled/Circle";
+import Bill from "./Styled/Bill";
+import Spacer from "./Styled/Spacer";
+import SectionSpacer from "./Styled/SectionSpacer";
+import Tariffs from "./Styled/Tariffs";
+import Icon from "./Styled/Icon";
+import SlideButton from "./Styled/SlideButton";
+import BoxTariffs from "./Styled/BoxTariffs";
+import Form from "./Styled/Form";
+import TariffForm from "./Styled/TariffForm";
+import SelectPlans from "./Styled/SelectPlans";
+
 const SelectPlan = () => {
   return (
     <div>
-      <div className="flex items-center justify-center bg-slate-300 h-[700px]">
-        <div className="w-[920px] h-[550px] bg-slate-50 rounded-[10px] flex items-center justify-around">
+      <Container>
+        <Form>
           <StatusBar />
-          <div className="w-[600px] h-[530px] bg-slate-50 rounded-[10px]">
-            <div className="flex flex-col ml-[80px]">
-              <div className="mt-[30px]">
-                <p className="font-[800] text-[20px]">Select your plan</p>
-                <p className="font-[500] text-[15px] text-slate-500 mt-[20px]">
+          <TariffForm>
+            <SelectPlans>
+              <SectionSpacer>
+                <Title>Select your plan</Title>
+                <Explanation>
                   You have the option of monthly or yearly billing.
-                </p>
-              </div>
-              <div className="mt-[30px] flex items-center justify-around mt-[50px]">
-                <div className="w-[160px] h-[190px] border-[2px] border-slate-500 rounded-[5px]">
-                  <div className="w-[50px] h-[50px] rounded-[100%] bg-amber-400 mt-[20px] ml-[20px]"></div>
-                  <div className="mt-[60px] ml-[20px]">
-                    <p className="font-[700]">Arcade</p>
-                    <p className="font-[400] text-[15px] text-slate-400">$9/mo</p>
-                  </div>
-                </div>
-                <div className="w-[160px] h-[190px] border-[2px] border-slate-500 rounded-[5px]">
-                  <div className="w-[50px] h-[50px] rounded-[100%] bg-red-400 mt-[20px] ml-[20px]"></div>
-                  <div className="mt-[60px] ml-[20px]">
-                    <p className="font-[700]">Advanced</p>
-                    <p className="font-[400] text-[15px] text-slate-400">$12/mo</p>
-                  </div>
-                </div>
-                <div className="w-[160px] h-[190px] border-[2px] border-slate-500 rounded-[5px]">
-                  <div className="w-[50px] h-[50px] rounded-[100%] bg-violet-400 mt-[20px] ml-[20px]"></div>
-                  <div className="mt-[60px] ml-[20px]">
-                    <p className="font-[700]">Pro</p>
-                    <p className="font-[400] text-[15px] text-slate-400">$15/mo</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center mt-[20px]">
-                <div className="w-[500px] h-[60px] bg-slate-200 rounded-[5px] flex items-center justify-around">
-                  <p className="font-[700]">Monthly</p>
-                  <button>
-                    <img src={Slidebutton} alt="" className="w-[50px]" />
-                  </button>
-                  <p className="font-[700]">Yearly</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                </Explanation>
+              </SectionSpacer>
+              <Plans>
+                <PlanBox>
+                  <Circle bg="#fbbf24"></Circle>
+                  <Spacer>
+                    <Bill>Arcade</Bill>
+                    <Price>$9/mo</Price>
+                  </Spacer>
+                </PlanBox>
+                <PlanBox>
+                  <Circle bg="#f87171"></Circle>
+                  <Spacer>
+                    <Bill>Advanced</Bill>
+                    <Price>$12/mo</Price>
+                  </Spacer>
+                </PlanBox>
+                <PlanBox>
+                  <Circle bg="#c084fc"></Circle>
+                  <Spacer>
+                    <Bill>Pro</Bill>
+                    <Price>$15/mo</Price>
+                  </Spacer>
+                </PlanBox>
+              </Plans>
+              <Tariffs>
+                <BoxTariffs>
+                  <Bill>Monthly</Bill>
+                  <SlideButton>
+                    <Icon src={Slidebutton} alt="" />
+                  </SlideButton>
+                  <Bill>Yearly</Bill>
+                </BoxTariffs>
+              </Tariffs>
+            </SelectPlans>
+          </TariffForm>
+        </Form>
+      </Container>
     </div>
   );
 };
