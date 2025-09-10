@@ -1,4 +1,3 @@
-import { PrefetchPageLinks } from "react-router";
 import StatusBar from "../../components/StatusBar/StatusBar";
 const Summary = () => {
   return (
