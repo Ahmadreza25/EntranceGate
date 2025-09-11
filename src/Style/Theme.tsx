@@ -10,6 +10,8 @@ declare module 'styled-components' {
     bgBar:string;
     borderBox:string;
     colorPrice:string
+    colorTotal:string
+    colorBill:string
   }
 }
 
@@ -22,6 +24,8 @@ export const lightTheme = {
     bgBar:"#4f46e5",
     borderBox:"2px solid #8b5cf6",
     colorPrice:"#8b5cf6",
+    colorTotal:"#64748b",
+    colorBill:"#64748b"
 }
 
 export const darkTheme = {
@@ -33,4 +37,6 @@ export const darkTheme = {
     bgBar:"#2196f3",
     borderBox:"2px solid #2196f3",
     colorPrice:"#2196f3",
+    colorTotal:"#9ca3af",
+    colorBill:"#111827"
 }
