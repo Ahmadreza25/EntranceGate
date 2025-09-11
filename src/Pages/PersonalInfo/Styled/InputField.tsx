@@ -5,7 +5,8 @@ const InputField = styled.input`
   height: 45px;
   outline: none;
   padding-left: 20px;
-  border: 1.5px solid #1e293b; 
+  border:${({theme}) => theme.border}; 
+  color:${({theme}) => theme.text};
   border-radius: 5px;
 `;
 

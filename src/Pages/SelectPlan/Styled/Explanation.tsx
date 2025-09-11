@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Explanation = styled.p`
   font-weight: 500;
   font-size: 15px;
-  color: #64748b;
+  color:${({ theme }) => theme.explanation};
   margin-top: 20px;
 `;
 

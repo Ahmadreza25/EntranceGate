@@ -4,7 +4,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #cbd5e1;
+  background-color: ${({ theme }) => theme.background};
   height: 700px;
 `;
 

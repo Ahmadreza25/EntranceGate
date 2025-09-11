@@ -1,6 +1,5 @@
 import StatusBar from "../../components/StatusBar/StatusBar";
 import Plans from "./Styled/Plans";
-import Slidebutton from "../../assets/icons/Slidebutton.png";
 import Container from "./Styled/Container";
 import PlanBox from "./Styled/PlanBox";
 import Explanation from "./Styled/Explanation";
@@ -11,8 +10,6 @@ import Bill from "./Styled/Bill";
 import Spacer from "./Styled/Spacer";
 import SectionSpacer from "./Styled/SectionSpacer";
 import Tariffs from "./Styled/Tariffs";
-import Icon from "./Styled/Icon";
-import SlideButton from "./Styled/SlideButton";
 import BoxTariffs from "./Styled/BoxTariffs";
 import Form from "./Styled/Form";
 import TariffForm from "./Styled/TariffForm";
@@ -58,9 +55,6 @@ const SelectPlan = () => {
               <Tariffs>
                 <BoxTariffs>
                   <Bill>Monthly</Bill>
-                  <SlideButton>
-                    <Icon src={Slidebutton} alt="" />
-                  </SlideButton>
                   <Bill>Yearly</Bill>
                 </BoxTariffs>
               </Tariffs>

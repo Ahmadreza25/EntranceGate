@@ -3,7 +3,7 @@ import styled from "styled-components";
 const BoxTariffs = styled.div`
   width: 500px;
   height: 60px;
-  background-color: #e2e8f0;
+  background-color:${({ theme }) => theme.background};
   border-radius: 5px;
   display: flex;
   align-items: center;
