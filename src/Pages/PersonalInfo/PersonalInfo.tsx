@@ -9,6 +9,7 @@ import Title from "./Styled/Title";
 import InputField from "./Styled/InputField";
 import SectionSpacer from "./Styled/SectionSpacer";
 import Spacer from "./Styled/Spacer";
+
 const PersonalInfo = () => {
   return (
     <>
