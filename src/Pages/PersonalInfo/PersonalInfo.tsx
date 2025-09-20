@@ -6,9 +6,14 @@ import SectionSpacer from "./Styled/SectionSpacer";
 import Spacer from "./Styled/Spacer";
 import usePerconalInfo from "../../store";
 
-const PersonalInfo = () => {
+const PersonalInfo = ({ warning }: { warning: boolean }) => {
   const { name, email, userName, setName, setEmail, setUserName } =
     usePerconalInfo();
+
+  const nameErorr = warning && name.trim() === "";
+  const emailErorr = warning && email.trim() === "";
+  const userNameErorr = warning && email.trim() === "";
+  
   return (
     <>
       <SectionSpacer>
