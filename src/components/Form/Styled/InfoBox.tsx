@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-const Factor = styled.div`
+const InfoBox = styled.div`
   display: flex;
   flex-direction: column;
+  width: 500px;
+  height: 450px;
   margin-left: 80px;
 `;
 
-export default Factor;
+export default InfoBox;
