@@ -8,10 +8,13 @@ import SelectPlan from "../../Pages/SelectPlan/SelectPlan";
 import SelectPlugin from "../../Pages/SelectPlugin/SelectPlugin";
 import Summary from "../../Pages/Summary/Summary";
 import usePerconalInfo from "../../store";
+import Button from "./Styled/Button";
+import Box from "./Styled/Box";
 import { useState } from "react";
 
 const Form = () => {
   const [counter, setCounter] = useState(0);
+
   const [warning, setWarning] = useState(false);
 
   const { name, email, userName } = usePerconalInfo();
@@ -19,19 +22,27 @@ const Form = () => {
   const isPersonalInfoValid = () => {
     return name.trim() !== "" && email.trim() !== "" && userName.trim() !== "";
   };
-  const pages = [
-    <PersonalInfo warning = {warning}/>,
-    <SelectPlan />,
-    <SelectPlugin />,
-    <Summary />,
-  ];
+
+  const renderPage = () => {
+    switch (counter) {
+      case 0:
+        return <PersonalInfo warning={warning} />;
+      case 1:
+        return <SelectPlan />;
+      case 2:
+        return <SelectPlugin />;
+      case 3:
+        return <Summary />;
+      default:
+        return null;
+    }
+  };
 
   const nextStep = () => {
     if (counter === 0 && !isPersonalInfoValid()) {
       setWarning(true);
       return;
     }
-    setWarning(false);
     setCounter(counter + 1);
   };
   const goBack = () => {
@@ -44,25 +55,15 @@ const Form = () => {
         <Forms>
           <StatusBar />
           <FormInfo>
-            <InfoBox>{pages[counter]}</InfoBox>
-            <div className=" w-[100%] h-[70px] flex items-center justify-around">
-              <button
-                disabled={
-                  (counter === 0 && !isPersonalInfoValid()) || counter === 3
-                }
-                onClick={nextStep}
-                className="w-[130px] h-[40px] text-slate-50 bg-violet-500 rounded-[5px]"
-              >
+            <InfoBox>{renderPage()}</InfoBox>
+            <Box>
+              <Button bg="#8b5cf6" disabled={counter === 3} onClick={nextStep}>
                 Next Step
-              </button>
-              <button
-                disabled={counter === 0}
-                onClick={goBack}
-                className="w-[130px] h-[40px] text-slate-50 bg-blue-500 rounded-[5px]"
-              >
+              </Button>
+              <Button bg="#3b82f6" disabled={counter === 0} onClick={goBack}>
                 Go Back
-              </button>
-            </div>
+              </Button>
+            </Box>
           </FormInfo>
         </Forms>
       </Container>

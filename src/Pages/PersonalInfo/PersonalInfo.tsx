@@ -4,15 +4,15 @@ import Title from "./Styled/Title";
 import InputField from "./Styled/InputField";
 import SectionSpacer from "./Styled/SectionSpacer";
 import Spacer from "./Styled/Spacer";
-import usePerconalInfo from "../../store";
+import usePersonalInfo from "../../store";
 
 const PersonalInfo = ({ warning }: { warning: boolean }) => {
-  const { name, email, userName, setName, setEmail, setUserName } =
-    usePerconalInfo();
+  const { name, email, userName, setName, setEmail, setUserName } = usePersonalInfo()
 
-  const nameErorr = warning && name.trim() === "";
-  const emailErorr = warning && email.trim() === "";
-  const userNameErorr = warning && email.trim() === "";
+  const nameError = warning && name === "";
+  const emailError = warning && email === "";
+  const userNameError = warning && userName === "";
+  
   
   return (
     <>
@@ -24,27 +24,30 @@ const PersonalInfo = ({ warning }: { warning: boolean }) => {
       </SectionSpacer>
       <SectionSpacer>
         <Spacer>
-          <TitleInfo>Name</TitleInfo>
+          <TitleInfo colorError={nameError}>Name</TitleInfo>
           <InputField
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            hasError={nameError}
           />
         </Spacer>
         <Spacer>
-          <TitleInfo>Email Address</TitleInfo>
+          <TitleInfo colorError={emailError}>Email Address</TitleInfo>
           <InputField
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            hasError={emailError}
           />
         </Spacer>
         <Spacer>
-          <TitleInfo>Phone Numder</TitleInfo>
+          <TitleInfo colorError = {userNameError}>Phone Number</TitleInfo>
           <InputField
             type="text"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
+            hasError = {userNameError}
           />
         </Spacer>
       </SectionSpacer>

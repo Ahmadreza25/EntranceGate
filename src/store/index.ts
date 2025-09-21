@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
-interface typePerconalInfo {
+interface usePersonalInfo{
   name:string
   email:string
   userName:string
@@ -10,7 +10,7 @@ interface typePerconalInfo {
 }
   
 
-const usePerconalInfo = create<typePerconalInfo,[["zustand/persist", typePerconalInfo]]>(
+const usePersonalInfo = create<usePersonalInfo,[["zustand/persist", usePersonalInfo]]>(
   persist(
   (set) => ({
     name: "",
@@ -28,4 +28,4 @@ const usePerconalInfo = create<typePerconalInfo,[["zustand/persist", typePercona
 )
 
 
-export default usePerconalInfo
+export default usePersonalInfo
