@@ -53,7 +53,7 @@ const Form = () => {
     <div>
       <Container>
         <Forms>
-          <StatusBar />
+          <StatusBar counter={counter}/>
           <FormInfo>
             <InfoBox>{renderPage()}</InfoBox>
             <Box>
