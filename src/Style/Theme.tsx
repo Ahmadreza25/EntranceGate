@@ -13,6 +13,7 @@ declare module "styled-components" {
     colorTotal: string;
     colorBill: string;
     error: string;
+    status:string
   }
 }
 
@@ -28,6 +29,7 @@ export const lightTheme = {
   colorTotal: "#64748b",
   colorBill: "#64748b",
   error: "#ef4444",
+  status:"#7dd3fc"
 };
 
 export const darkTheme = {
@@ -42,4 +44,5 @@ export const darkTheme = {
   colorTotal: "#9ca3af",
   colorBill: "#111827",
   error: "#f87171",
+  status:"#5eead4"
 };

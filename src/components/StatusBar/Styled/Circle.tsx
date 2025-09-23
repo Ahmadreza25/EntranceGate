@@ -9,8 +9,8 @@ const Circle = styled.div<{counter?:boolean , completed:boolean}>`
   align-items: center;
   justify-content: center;
   background-color:${({theme , counter , completed}) =>{
-    if(counter) return theme.background
-    if(completed) return theme.background
+    if(counter) return theme.status
+    if(completed) return theme.status
     else{
       theme.bgBar
     }
