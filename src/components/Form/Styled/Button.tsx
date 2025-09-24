@@ -11,6 +11,11 @@ const Button = styled.button<ButtonProps>`
   color: #f8fafc;
   background-color:${props => props.bg}; 
   border-radius: 5px;
+  @media (max-width: 480px) {
+    font-size:12px;
+    width:80px;
+    height:30px;
+  }
 `;
 
 export default Button;

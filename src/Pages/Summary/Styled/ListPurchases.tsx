@@ -10,6 +10,10 @@ const ListPurchases = styled.div`
   justify-content: center;
   border-radius: 5px;
   margin-top: 20px;
+  @media (max-width: 480px) {
+    width:370px;
+    height:160px;
+  }
 `;
 
 export default ListPurchases;

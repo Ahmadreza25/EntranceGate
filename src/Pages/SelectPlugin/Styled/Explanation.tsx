@@ -5,6 +5,9 @@ const Explanation = styled.p`
   font-size: 15px; 
   color:${({theme}) => theme.explanation}; 
   margin-top: 20px;
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 `;
 
 export default Explanation;

@@ -5,6 +5,12 @@ const Plans = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 480px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 export default Plans;

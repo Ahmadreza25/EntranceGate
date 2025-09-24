@@ -11,6 +11,11 @@ const Circle = styled.div<CircleProps>`
   background-color:${props => props.bg};
   margin-top: 20px;
   margin-left: 20px;
+  @media (max-width: 480px) {
+    margin-top:0px;
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export default Circle;

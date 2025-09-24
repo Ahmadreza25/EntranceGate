@@ -5,6 +5,9 @@ const Description = styled.div`
   flex-direction: column;
   margin-left: 20px;
   width: 300px;
+  @media (max-width: 480px) {
+    width: 170px;
+  }
 `;
 
 export default Description;
