@@ -6,6 +6,8 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 480px) {
+  }
 `;
 
 export default Box;
